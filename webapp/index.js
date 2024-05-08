@@ -1,7 +1,10 @@
 sap.ui.define([
-    // Dependencies would be listed here, e.g., 'sap/ui/core/mvc/Controller'
-], function() {
+    "sap/m/Text"
+], function(Text) {
     "use strict";
 
-    alert("Ui5 is ready to go");
+    new Text({
+        text:"Hello, world"
+    }).placeAt("content");
 });
+
