@@ -1,5 +1,5 @@
 {
-  "name": "supermaribel-sap-ui5",
+  "name": "supermaribel-sap-ui5.demo",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -10,3 +10,4 @@
   "author": "",
   "license": "ISC"
 }
+
