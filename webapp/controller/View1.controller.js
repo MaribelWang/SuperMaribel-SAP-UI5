@@ -1,42 +1,15 @@
 sap.ui.define(
-  [
-    "sap/ui/core/mvc/Controller",
-    "sap/m/MessageToast", //library m, module MessageToast
-    "sap/ui/model/json/JSONModel",
-    "sap/ui/model/resource/ResourceModel",
-  ],
-  /**
-   * @param {typeof sap.ui.core.mvc.Controller} Controller
-   */
-  function (Controller, MessageToast, JSONModel, ResourceModel) {
+  ["sap/ui/core/mvc/Controller", "sap/m/MessageToast"],
+  (Controller, MessageToast) => {
     "use strict";
     return Controller.extend("project1.controller.App", {
-      onInit: function () {
-        //set a data model on the view
-        var oData = {
-          recipient: {
-            name: "Jingwei",
-          },
-        };
-        var oModel = new JSONModel(oData);
-        this.getView().setModel(oModel);
-        //set i18n model on view
-        var i18nModel = new ResourceModel({
-          bundleName: "project1.i18n.i18n",
-          suportedLocales: [""],
-          fallbackLocales: "",
-        });
-        this.getView().setModel(i18nModel, "i18n");
-      },
-
-      onSayHiButtonPress: function () {
-        //read mesg from i18n model
-        var oBundle = this.getView().getModel("i18n").getResourceBundle();
-        var sRecipient = this.getView()
+      onSayHiButtonPress() {
+        //Read msg from i18n model
+        const oBundle = this.getView().getModel("i18n").getResourceBundle();
+        const sRecipient = this.getView()
           .getModel()
           .getProperty("/recipient/name");
-        var sMsg = oBundle.getText("helloMsg", [sRecipient]);
-        //Show message
+        const sMsg = oBundle.getText("HelloMsg,", [sRecipient]);
         MessageToast.show(sMsg);
       },
     });
