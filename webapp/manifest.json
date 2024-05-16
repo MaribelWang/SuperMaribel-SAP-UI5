@@ -80,25 +80,41 @@
       },
       "routes": [
         {
-          "name": "RouteView",
+          "name": "RouteView1",
           "pattern": ":?query:",
           "target": [
-            "TargetView"
+            "TargetView1"
+          ]
+        },
+        {
+          "name": "RouteView2",
+          "pattern": "route2",
+          "target": [
+            "TargetView2"
           ]
         }
       ],
       "targets": {
-        "TargetView": {
+        "TargetView1": {
           "viewType": "XML",
           "transition": "slide",
           "clearControlAggregation": false,
-          "viewId": "View",
-          "viewName": "View1"
-        }
+          "viewId": "View1",
+          "viewName": "View1",
+          "level": 1
+        },
+        "TargetView2": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "View2",
+          "viewName": "View2",
+          "level": 2
+        }        
       }
     },
     "rootView": {
-      "viewName": "project1.view.View",
+      "viewName": "project1.view.View1",
       "type": "XML",
       "async": true,
       "id": "App"

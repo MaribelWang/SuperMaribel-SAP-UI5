@@ -5,12 +5,14 @@ sap.ui.define(
 
     return UIComponent.extend("project1.Component", {
       metadata: {
-        interfaces: ["sap.ui.core.IAsyncContentCreation"],
         manifest: "json",
       },
       init: function () {
         // call the base component's init function
         UIComponent.prototype.init.apply(this, arguments);
+
+        // enable routing
+        this.getRouter().initialize();
 
         const oData = {
           recipient: {
