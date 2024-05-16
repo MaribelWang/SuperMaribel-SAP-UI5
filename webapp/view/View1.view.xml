@@ -3,7 +3,7 @@
     xmlns="sap.m">
 	<Page id="page1" title="First Page">
 		<content>
-            <Button id="lala" text="Say Hi" press=".onSayHiButtonPress"></Button>
+            <Button id="lala" text="Say hi" press=".onSayHiButtonPress"></Button>
             <Input id="oModelName" value="{/recipient/name}" description="Hello {/recipient/name}" valueLiveUpdate="true" width="60%"/>
 		</content>
 	</Page>

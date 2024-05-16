@@ -114,7 +114,7 @@
       }
     },
     "rootView": {
-      "viewName": "project1.view.View1",
+      "viewName": "project1.view.App",
       "type": "XML",
       "async": true,
       "id": "App"

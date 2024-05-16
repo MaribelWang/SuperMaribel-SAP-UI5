@@ -13,6 +13,7 @@ sap.ui.define(
         this.getView().setModel(oModel);
       },
       onSayHiButtonPress() {
+        this.getOwnerComponent().getRouter().navTo("RouteView2");
         alert("Hi");
       },
     });
