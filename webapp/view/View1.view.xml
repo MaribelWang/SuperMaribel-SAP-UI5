@@ -1,10 +1,30 @@
-<mvc:View controllerName="project1.controller.View1"
-    xmlns:mvc="sap.ui.core.mvc"  displayBlock="true"
-    xmlns="sap.m">
-	<Page id="page1" title="First Page">
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="project1.controller.View1" displayBlock="true">
+	<Page id="pSweetSupplier" title="Sweet Suppliers">
 		<content>
-            <Button id="lala" text="Say hi" press=".onSayHiButtonPress"></Button>
-            <Input id="oModelName" value="{/recipient/name}" description="Hello {/recipient/name}" valueLiveUpdate="true" width="60%"/>
+			<Table id="tSweetSupplier" items="{/SweetsSupplier}">
+				<headerToolbar>
+					<Toolbar id="tSweets">
+						<Label id="lNumber" text="Number of Sweets Suppliers :{/SweetsSupplier/1/ID}"/>
+					</Toolbar>
+				</headerToolbar>
+				<columns>
+					<Column id="cId">
+						<header><Text id="tId" text="Sweet Shop ID"/></header>
+					</Column>
+					<Column id="cName">
+						<header><Text id="tName" text="Sweet Shop Name"/>
+						</header>
+					</Column>
+				</columns>
+				<items>
+					<ColumnListItem type="Navigation" press="onListItemPress">
+						<cells>
+							<ObjectIdentifier text="{ID}"/>
+							<ObjectIdentifier text="{Name}"/>
+						</cells>
+					</ColumnListItem>
+				</items>
+			</Table>
 		</content>
 	</Page>
 

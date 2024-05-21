@@ -3,7 +3,10 @@
     xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
     xmlns="sap.m">
     <App id="app">
-    
+        <pages>
+            <mvc:XMLView id="initialPage" viewName="project1.view.View1"></mvc:XMLView>
+            <mvc:XMLView id="detailPage" viewName="project1.view.View2"></mvc:XMLView>
+        </pages>
     </App>
 
 </mvc:View>

@@ -1,0 +1,27 @@
+{
+  "CountSweets": "2",
+  "SweetsSupplier": [
+    {
+      "ID": 0,
+      "Name": "Sweet Magic",
+      "Address": {
+        "Street": "Sivarao Street",
+        "City": "Barcelona",
+        "State": "Catalunya",
+        "ZipCode": "08056",
+        "Country": "Spain"
+      }
+    },
+    {
+      "ID": "1",
+      "Name": "Aanjaneya Sweets",
+      "Address": {
+        "Street": "Bhavanipuram",
+        "City": "Madrid",
+        "State": "Madrid",
+        "ZipCode": "08033",
+        "Country": "Spain"
+      }
+    }
+  ]
+}

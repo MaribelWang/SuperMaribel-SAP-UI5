@@ -56,9 +56,21 @@
         "type": "sap.ui.model.resource.ResourceModel",
         "settings": {
           "bundleName": "project1.i18n.i18n",
-          "supportedLocales":[""],
+          "supportedLocales": [""],
           "fallbackLocale": ""
         }
+      },
+      "": {
+        "type": "sap.ui.model.json.JSONModel",
+        "settings": {},
+        "preload": false,
+        "uri": "model/model.json"
+      },
+      "namedModel": {
+        "type": "sap.ui.model.json.JSONModel",
+        "settings": {},
+        "preload": false,
+        "uri": "model/namedModel.json"
       }
     },
     "resources": {
@@ -76,22 +88,19 @@
         "viewPath": "project1.view",
         "controlAggregation": "pages",
         "controlId": "app",
-        "clearControlAggregation": false
+        "clearControlAggregation": false,
+        "transition": "slide"
       },
       "routes": [
         {
           "name": "RouteView1",
-          "pattern": ":?query:",
-          "target": [
-            "TargetView1"
-          ]
+          "pattern": "",
+          "target": ["TargetView1"]
         },
         {
-          "name": "RouteView2",
-          "pattern": "route2",
-          "target": [
-            "TargetView2"
-          ]
+          "name": "detail",
+          "pattern": "detail/{ID}",
+          "target": ["detail"]
         }
       ],
       "targets": {
@@ -103,14 +112,14 @@
           "viewName": "View1",
           "level": 1
         },
-        "TargetView2": {
+        "detail": {
           "viewType": "XML",
           "transition": "slide",
           "clearControlAggregation": false,
-          "viewId": "View2",
+          "viewId": "detail",
           "viewName": "View2",
           "level": 2
-        }        
+        }
       }
     },
     "rootView": {

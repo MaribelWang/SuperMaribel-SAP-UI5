@@ -5,7 +5,11 @@ sap.ui.define(
 
     return UIComponent.extend("project1.Component", {
       metadata: {
+        rootView: "project1.view.App",
         manifest: "json",
+        coonfig: {
+          serviceUrl: "webapp/model/models.json ",
+        },
       },
       init: function () {
         // call the base component's init function
@@ -13,14 +17,6 @@ sap.ui.define(
 
         // enable routing
         this.getRouter().initialize();
-
-        const oData = {
-          recipient: {
-            name: "Jingwei",
-          },
-        };
-        const oModel = new JSONModel(oData);
-        this.setModel(oModel);
       },
     });
   }

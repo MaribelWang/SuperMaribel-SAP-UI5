@@ -1,21 +1,14 @@
-sap.ui.define(
-  ["sap/ui/core/mvc/Controller", "sap/m/MessageToast"],
-  (Controller, MessageToast) => {
-    "use strict";
-    return Controller.extend("project1.controller.View1", {
-      onInit: function () {
-        // Initialize your model and set it to the view
-        const oModel = new sap.ui.model.json.JSONModel({
-          recipient: {
-            name: "World",
-          },
-        });
-        this.getView().setModel(oModel);
-      },
-      onSayHiButtonPress() {
-        this.getOwnerComponent().getRouter().navTo("RouteView2");
-        alert("Hi");
-      },
-    });
-  }
-);
+sap.ui.define(["sap/ui/core/mvc/Controller"], function (Controller) {
+  "use strict";
+  return Controller.extend("project1.controller.View1", {
+    onListItemPress: function (oEvent) {
+      /*this.getView().getModel().setDefaultBindingMode("OneWay");*/
+      var oSelectedItem = oEvent.getSource();
+      var oCtxt = oSelectedItem.getBindingContext();
+      var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+      oRouter.navTo("detail", {
+        ID: oCtxt.getProperty("ID"),
+      });
+    },
+  });
+});
