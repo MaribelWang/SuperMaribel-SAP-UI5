@@ -1,0 +1,23 @@
+<mvc:View
+    controllerName="project1.controller.ListDetail"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:l="sap.ui.layout"
+    xmlns:c="sap.ui.core"
+    displayBlock="true"
+    height="100%"
+    busyIndicatorDelay="0"
+>
+    <Page title="Product Details">
+        <content>
+            <Panel headerText="Product Details">
+                <l:Grid>
+                    <Text text="{ODATA>ProductID}" />
+                    <Text text="{ODATA>Name}" />
+                    <Text text="{ODATA>Description}" />
+                    <Text text="{ODATA>Price}" />
+                </l:Grid>
+            </Panel>
+        </content>
+    </Page>
+</mvc:View>
